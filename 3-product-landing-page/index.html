@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+        integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="https://image.flaticon.com/icons/png/512/882/882704.png">
+    <title>Landing Page</title>
+
+</head>
+
+<body>
+    <header id="header">
+        <div class="container">
+            <div id="headerimg">
+                <img id="header-img"
+                    src="https://image.flaticon.com/icons/png/512/731/731985.png"
+                    alt="apple">
+            </div>
+            <div class="list">
+                <nav id="nav-bar">
+                    <ul>
+                        <li>
+                            <a class="nav-link" href="#title">Products</a>
+                        </li>
+                        <li>
+                            <a class="nav-link" href="#form">Buy</a>
+                        </li>
+                        <li>
+                            <a class="nav-link" href="#footer">Support</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <div class="text">
+        <h1 class="title" id="title">iPhone 12 and iPhone 12Mini</h1>
+        <h3 class="subtitle"> <em> Blast past fast.</em></h3>
+        <p class="title-text">5G speed. A14 Bionic, the fastest chip in a smartphone.
+            An edge-to-edge OLED display. Ceramic Shield with four times better drop performance. And Night mode on
+            every camera. iPhone 12 has it all — in two perfect sizes.</p>
+    </div>
+    <div id="video-div">
+        <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/EDzzR-cirbg"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+    </div>
+    <form id="form" action="https://www.freecodecamp.com/email-submit">
+        <p class="radio-text">Choose your phone</p>
+        <div class="radio-button">
+            <input type="radio" id="radio" name="choose" value="iphone12">
+            <label for="radio">iPhone 12</label><br>
+            <input type="radio" id="radio-2" name="choose" value="iphone12m">
+            <label for="radio-2">iPhone 12 Mini</label><br>
+        </div>
+        <div class="mail">
+            <label for="email">Register for pre-order</label><br>
+            <input type="email" id="email" placeholder="Enter your email.." required name="email"><br>
+            <input type="submit" id="submit" value="Submit">
+        </div>
+    </form>
+    <footer id="footer">
+        <p>&copy; Copyright 2021</p>
+    </footer>
+</body>
+
+</html>

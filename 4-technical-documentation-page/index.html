@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="https://image.flaticon.com/icons/png/512/2014/2014997.png">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="flexbox">
+        <main id="main-doc">
+            <section class="main-section" id="The_Python_Tutorial">
+                <header>
+                    <h1>The Python Tutorial</h1>
+                </header>
+                <p>Python is an easy to learn, powerful programming language. It has efficient high-level data structures
+                    and a simple but effective approach to object-oriented programming. Python’s elegant syntax and dynamic
+                    typing, together with its interpreted nature, make it an ideal language for scripting and rapid
+                    application development in many areas on most platforms.The Python interpreter and the extensive
+                    standard library are freely available in source or binary form for all major platforms from the Python
+                    Web site, https://www.python.org/, and may be freely distributed. The same site also contains
+                    distributions of and pointers to many free third party Python modules, programs and tools, and
+                    additional documentation.</p>
+            </section>
+            <section class="main-section" id="Whetting_Your_Appetite">
+                <header>
+                    <h2>Whetting Your Appetite</h2>
+                </header>
+                <p>If you do much work on computers, eventually you find that there’s some task you’d like to automate. For
+                    example, you may wish to perform a search-and-replace over a large number of text files, or rename and
+                    rearrange a bunch of photo files in a complicated way. Perhaps you’d like to write a small custom
+                    database, or a specialized GUI application, or a simple game.</p>
+                <br>
+                <p>Python enables programs to be written compactly and readably. Programs written in Python are typically
+                    much shorter than equivalent C, C++, or Java programs, for several reasons: </p>
+                <ul>
+                    <li>the high-level data types allow you to express complex operations in a single statement;</li>
+                    <li>statement grouping is done by indentation instead of beginning and ending brackets;</li>
+                    <li>no variable or argument declarations are necessary.</li>
+                </ul>
+            </section>
+            <section class="main-section" id="More_Control_Flow_Tools">
+                <header>
+                    <h2>More Control Flow Tools</h2>
+                </header>
+                <p>Besides the while statement just introduced, Python uses the usual flow control statements known from
+                    other languages, with some twists.</p>
+                <div class="code-container">
+                    <code>
+                        if x < 0: <br>
+                            ... x = 0 <br>
+                            ... print('Negative changed to zero') <br>
+                            ... elif x == 0: <br>
+                            ... print('Zero') <br>
+                            ... elif x == 1: <br>
+                            ... print('Single') <br>
+                            ... else: <br>
+                            ... print('More') <br>
+                    </code>
+                </div>
+                <p>The for statement in Python differs a bit from what you may be used to in C or Pascal. Rather than always
+                    iterating over an arithmetic progression of numbers (like in Pascal), or giving the user the ability to
+                    define both the iteration step and halting condition (as C), Python’s for statement iterates over the
+                    items of any sequence (a list or a string), in the order that they appear in the sequence. For example
+                    (no pun intended):</p>
+                <div class="code-container">
+                    <code>
+                        >>> # Measure some strings: <br>
+                        ... words = ['cat', 'window', 'defenestrate'] <br>
+                        >>> for w in words: <br>
+                        ... print(w, len(w)) <br>
+                        ... <br>
+                        cat 3 <br>
+                        window 6 <br>
+                        defenestrate 12 <br>
+                    </code>
+                </div>
+                <p>The pass statement does nothing. It can be used when a statement is required syntactically but the
+                    program requires no action. For example:</p>
+                <div class="code-container">
+                    <code>
+                        >>> while True: <br>
+                        ... pass # Busy-wait for keyboard interrupt (Ctrl+C) <br>
+                        ...
+                    </code>
+                </div>
+                <p>We can create a function that writes the Fibonacci series to an arbitrary boundary:</p>
+                <div class="code-container">
+                    <code>
+                        >>> def fib(n): # write Fibonacci series up to n <br>
+                        ... """Print a Fibonacci series up to n.""" <br>
+                        ... a, b = 0, 1 <br>
+                        ... while a < n: <br>
+                            ... print(a, end=' ') <br>
+                            ... a, b = b, a+b <br>
+                            ... print() <br>
+                            ... <br>
+                            >>> # Now call the function we just defined: <br>
+                            ... fib(2000) <br>
+                            0 1 1 2 3 5 8 13 21 34 55 89 144 233 377 610 987 1597 <br>
+                    </code>
+                </div>
+            </section>
+            <section class="main-section" id="Modules">
+                <header>
+                    <h2>Modules</h2>
+                </header>
+                <p>If you quit from the Python interpreter and enter it again, the definitions you have made (functions and
+                    variables) are lost. Therefore, if you want to write a somewhat longer program, you are better off using
+                    a text editor to prepare the input for the interpreter and running it with that file as input instead.
+                    This is known as creating a script. As your program gets longer, you may want to split it into several
+                    files for easier maintenance. You may also want to use a handy function that you’ve written in several
+                    programs without copying its definition into each program.</p>
+                <div class="code-container">
+                    <code>
+                        # Fibonacci numbers module <br>
+
+                        def fib(n): # write Fibonacci series up to n <br>
+                        a, b = 0, 1 <br>
+                        while a < n: <br>
+                            print(a, end=' ') <br>
+                            a, b = b, a+b <br>
+                            print() <br>
+
+                            def fib2(n): # return Fibonacci series up to n <br>
+                            result = [] <br>
+                            a, b = 0, 1 <br>
+                            while a < n: <br>
+                                result.append(a) <br>
+                                a, b = b, a+b <br>
+                                return result
+                    </code>
+                </div>
+            </section>
+            <section class="main-section" id="Input_and_Output">
+                <header>
+                    <h2>Input and Output</h2>
+                </header>
+                <p>There are several ways to present the output of a program; data can be printed in a human-readable form,
+                    or written to a file for future use. This chapter will discuss some of the possibilities. </p>
+                <ul>
+                    <li>To use formatted string literals, begin a string with f or F before the opening quotation mark or
+                        triple quotation mark. Inside this string, you can write a Python expression between { and }
+                        characters that can refer to variables or literal values.</li>
+                    <li>The str.format() method of strings requires more manual effort. You’ll still use { and } to mark
+                        where a variable will be substituted and can provide detailed formatting directives, but you’ll also
+                        need to provide the information to be formatted.</li>
+                    <li>Finally, you can do all the string handling yourself by using string slicing and concatenation
+                        operations to create any layout you can imagine. The string type has some methods that perform
+                        useful operations for padding strings to a given column width.</li>
+                </ul>
+                <p>When you don’t need fancy output but just want a quick display of some variables for debugging purposes,
+                    you can convert any value to a string with the repr() or str() functions.</p>
+            </section>
+        </main>
+        <nav id="navbar">
+            <header>
+                <h2>Python Documentation</h2>
+            </header>
+            <a href="#The_Python_Tutorial" class="nav-link">The Python Tutorial</a>
+            <a href="#Whetting_Your_Appetite" class="nav-link">Whetting Your Appetite</a>
+            <a href="#More_Control_Flow_Tools" class="nav-link">More Control Flow Tools</a>
+            <a href="#Modules" class="nav-link">Modules</a>
+            <a href="#Input_and_Output" class="nav-link">Input and Output</a>
+        </nav>
+    </div>
+</body>
+
+</html>
